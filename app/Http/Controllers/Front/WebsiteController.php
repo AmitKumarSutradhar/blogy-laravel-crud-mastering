@@ -17,4 +17,7 @@ class WebsiteController extends Controller
     public function blogDetails(){
         return view('frontend.blogs.blog-details');
     }
+    public function dashboard(){
+        return view('backend.dashboard.dashboard');
+    }
 }
