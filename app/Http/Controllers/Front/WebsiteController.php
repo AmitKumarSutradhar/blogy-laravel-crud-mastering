@@ -3,12 +3,17 @@
 namespace App\Http\Controllers\Front;
 
 use App\Http\Controllers\Controller;
+use App\Models\Blog;
 use Illuminate\Http\Request;
 
 class WebsiteController extends Controller
 {
+    protected $blogs;
     public function home(){
-        return view('frontend.home.home');
+        $this->blogs = Blog::all();
+        return view('frontend.home.home',[
+            'blogs'  =>  $this->blogs,
+        ]);
     }
 
     public function categoryBlog(){
