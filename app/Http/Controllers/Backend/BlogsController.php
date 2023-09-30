@@ -24,7 +24,10 @@ class BlogsController extends Controller
     }
 
     public function manage(){
-
+        $this->blogs = Blog::all();
+        return view('backend.blogs.manage',[
+            'blogs' => $this->blogs,
+        ]);
     }
 
     public function edit(){

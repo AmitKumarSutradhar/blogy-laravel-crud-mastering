@@ -143,8 +143,7 @@
                         </a>
                         <span class="date">Apr. 14th, 2022</span>
                         <h2><a href="single.html">{{ $blog->title }}</a></h2>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                        <p><a href="#" class="read-more">Continue Reading</a></p>
+                        <p>{{ $blog->description }}</p>
                     </div>
                 </div>
                 @endforeach
